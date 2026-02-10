@@ -218,3 +218,15 @@ h2 {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+.credit {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    font-size: 0.65rem;
+    text-transform: lowercase;
+    letter-spacing: 0.1em;
+    color: #1a1a1a;
+    opacity: 0.2;
+    transition: opacity 0.3s ease;
+}
