@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>emotion akinator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="bg-container">
+    <main id="app">
+        <div id="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+        <div id="question-container" class="fade-in">
+            <h2 id="question-text">loading...</h2>
+            <div class="options">
+                <button onclick="handleAnswer('yes')">yes</button>
+                <button onclick="handleAnswer('no')">no</button>
+            </div>
+            <button id="back-btn" class="back-btn hidden" onclick="goBack()">← back</button>
+        </div>
+        <div id="result-container" class="hidden">
+            <p class="label">i think you feel</p>
+            <h1 id="result-text"></h1>
+            <div id="result-buttons">
+                <button class="confirm-btn" onclick="confirmEmotion()">that's it</button>
+                <button class="continue-btn" onclick="continueGame()">not quite</button>
+            </div>
+            <button class="reset-btn-small" onclick="reset()">start over</button>
+        </div>
+        <div id="confirmed-container" class="hidden">
+            <h1 id="confirmed-emotion"></h1>
+            <p id="emotion-description"></p>
+            <button class="reset-btn" onclick="reset()">start over</button>
+        </div>
+        <div id="give-up-container" class="hidden">
+            <p class="label">i give up</p>
+            <h2>i can't figure it out</h2>
+            <button class="reset-btn" onclick="reset()">start over</button>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
